@@ -48,8 +48,8 @@ public class Cart {
     }
 
     public void save(OutputStream os) throws IOException{
-        OutputStreamWriter ows = new OutputStreamWriter(os);
-        BufferedWriter bw = new BufferedWriter(ows);
+        OutputStreamWriter osw = new OutputStreamWriter(os);
+        BufferedWriter bw = new BufferedWriter(osw);
         for(String item: contents)
             bw.write(item + "\n");
         
@@ -60,6 +60,6 @@ public class Cart {
     }
 
     public List<String> getContents(){
-
+        return contents;
     }
 }
